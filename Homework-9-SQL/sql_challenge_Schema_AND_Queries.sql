@@ -1,4 +1,4 @@
---Create Tables and Import CSV Data:
+--Create Tables and Import CSV Files/Data:
 
 DROP TABLE IF EXISTS departments;
 
@@ -84,24 +84,30 @@ SELECT * FROM titles;
 
 ALTER TABLE "dept_emp" ADD CONSTRAINT "foreign_key_dept_emp_emp_no" FOREIGN KEY("emp_no") REFERENCES "employees" ("emp_no");
 
+SELECT * FROM dept_emp;
+
 ALTER TABLE "dept_emp" ADD CONSTRAINT "foreign_key_dept_emp_dept_no" FOREIGN KEY("dept_no") REFERENCES "departments" ("dept_no");
+
+SELECT * FROM dept_emp;
 
 ALTER TABLE "dept_manager" ADD CONSTRAINT "foreign_key_dept_manager_dept_no" FOREIGN KEY("dept_no") REFERENCES "departments" ("dept_no");
 
+SELECT * FROM dept_manager;
+
 ALTER TABLE "dept_manager" ADD CONSTRAINT "foreign_key_dept_manager_emp_no" FOREIGN KEY("emp_no") REFERENCES "employees" ("emp_no");
+
+SELECT * FROM dept_manager;
 
 ALTER TABLE "salaries" ADD CONSTRAINT "foreign_key_salaries_emp_no" FOREIGN KEY("emp_no") REFERENCES "employees" ("emp_no");
 
+SELECT * FROM salaries;
+
 ALTER TABLE "titles" ADD CONSTRAINT "foreign_key_titles_emp_no" FOREIGN KEY("emp_no") REFERENCES "employees" ("emp_no");
 
---
-
-SELECT * FROM dept_emp;
-SELECT * FROM dept_manager;
-SELECT * FROM salaries;
 SELECT * FROM titles;
 
 --
+
 
 
 -- 1) List the following details of each employee: employee number, last name, first name, gender, and salary.
