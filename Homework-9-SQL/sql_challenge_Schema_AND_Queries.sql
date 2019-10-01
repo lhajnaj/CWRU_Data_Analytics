@@ -94,16 +94,14 @@ ALTER TABLE "salaries" ADD CONSTRAINT "foreign_key_salaries_emp_no" FOREIGN KEY(
 
 ALTER TABLE "titles" ADD CONSTRAINT "foreign_key_titles_emp_no" FOREIGN KEY("emp_no") REFERENCES "employees" ("emp_no");
 
+--
 
-
---Confirm proper importing of CSV files:
-SELECT * FROM departments;
 SELECT * FROM dept_emp;
 SELECT * FROM dept_manager;
-SELECT * FROM employees;
 SELECT * FROM salaries;
 SELECT * FROM titles;
 
+--
 
 
 -- 1) List the following details of each employee: employee number, last name, first name, gender, and salary.
