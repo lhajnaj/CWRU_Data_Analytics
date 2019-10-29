@@ -1,0 +1,219 @@
+body {
+
+	font-family: 'Titillium Web', sans-serif;
+}
+
+.navbar-brand {
+    background-color: lightseagreen;
+    padding: 0 3rem 0 3rem;
+}
+
+.brand_color {
+	color: white !important;
+	font-size: 1.8em;
+}
+
+.container {
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+}
+
+.navbar {
+    margin: 0;
+    padding: 0 6rem 0 6rem;
+}
+
+ .left {
+	 color: grey;
+ }
+
+.col {
+    padding-bottom: 2rem;
+}
+
+#image {
+	width: 65%;
+	height: 40%;
+	float:left;
+  }
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+a, h1,h2,h3{
+    color: lightseagreen;
+}
+
+
+h2 {
+	padding-top: 1.5rem;
+}
+
+hr {
+    padding-bottom: 1.5rem;
+}
+
+.card-block{
+    padding-top: 0.8rem;
+    background: lightseagreen;
+}
+#temp,#humid,#cloud,#wind {
+    color: white;
+}
+
+.card-title {
+    text-align: center;
+}
+
+.container-fluid tr td {
+    white-space: nowrap;
+}
+
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    table-layout: auto;
+}
+.table-scroll {
+	height: 32rem !important;
+    overflow-y: scroll;
+}
+th {
+    background-color:lightseagreen;
+    color: white;
+}
+td, th {
+    border: 1px solid white;
+    text-align: center;
+    padding: .2rem;
+}
+
+tr:nth-child(even) {
+    background-color:azure;
+}
+
+tr:nth-child(odd){
+	background: white;
+}
+
+
+footer {
+	text-align: center;
+}
+.fa {
+	color: lightseagreen;
+  	padding: 20px;
+  	font-size: 30px;
+  	width: 30px;
+  	text-decoration: none;
+  	margin: 5px 2px;
+  	border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.25;
+}
+
+
+
+
+
+
+
+
+body {
+    background: rgb(113, 196, 111);
+  }
+  
+  .skyblue {
+    background: rgb(38, 77, 90);
+  }
+  
+  .box{
+    padding: 10px;
+    background: rgb(255, 255, 255);
+    margin-top:50px;
+    margin-left:5px;
+    margin-right:5px;
+    margin-bottom:20px;
+    align-content: center;
+  }
+  
+  .navbar {
+    margin-right: 0px;
+    margin-left: 0px;
+    padding: 5px;
+    background: rgb(255, 255, 255);
+  }
+  
+  .navbar li {
+    display: d-block;
+    padding: 10px;
+    margin-right: 0px;
+    margin-left: 0px;
+    cursor: pointer ;
+  }
+  h1 {
+    font-size: 36px;
+  }
+  h2 {
+    font-size: 22px;
+  }
+  
+  p{
+      font-size: 18px;
+  }
+  
+  .c-d{color:white;
+    font-size: 30px;
+  }
+  
+  .latitude {
+    color: white;
+    font-family: verdana;
+    font-size: 45px;
+    background-color: rgb(25, 103, 155);
+    border: 1px solid rgb(22, 99, 150);
+      padding: 15px;
+
+    
+  }
+
+  @media (max-width: 500px) {
+    .navbar li {
+      padding: 10px;
+    }
+    .box {
+      margin-right: 22px;
+      margin-left: 22px;
+    }
+    .navbar ul {
+      visibility: hidden;
+    }
+    #nav-select {
+      visibility: visible;
+    }
+  }
+  
+  .col-1 {width: 8%;}
+  .col-2 {width: 17%;}
+  .col-3 {width: 24%;}
+  .col-4 {width: 32%;}
+  .col-5 {width: 40%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 60%;}
+  .col-8 {width: 65%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 82%;}
+  .col-11 {width: 92%;}
+  .col-12 {width: 100%;}
+  
+  @media only screen and (max-width: 768px) {
+
+      [class*="col-"] {
+          width: 100%;
+      }
+  }
