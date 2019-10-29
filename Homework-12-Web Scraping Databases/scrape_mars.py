@@ -43,7 +43,7 @@ def scrape_mars_news():
         # Parse HTML with Beautiful Soup
         soup = BeautifulSoup(html, 'html.parser')
 
-        # Retrieve the latest element that contains news title and news_paragraph
+        # Retrieve the latest  news title and news_paragraph
         news_title = soup.find('div', class_='content_title').find('a').text
         news_p = soup.find('div', class_='article_teaser_body').get_text()
 
