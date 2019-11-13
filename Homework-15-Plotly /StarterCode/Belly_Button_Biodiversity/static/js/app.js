@@ -1,56 +1,56 @@
 function buildMetadata(sample) {
 
   // To complete the function that builds the metadata panel, start by using d3.json to pull a sample with the metadata:
-  var metadataURL = `/metadata/${sample}`;
+  var metaDataRoute = `/metadata/${sample}`;
+
     // Use d3 to select the panel with id of `#sample-metadata`
-    d3.json(metadataURL).then(function(sample){
-      var sampleData = d3.select(`#sample-metadata`);
+    d3.json(metaDataRoute).then(function(sample){
+      var sampleMetaData = d3.select(`#sample-metadata`);
+
     // Use `.html("") to clear any existing metadata
-      sampleData.html("");
+    sampleMetaData.html("");
+
     // Use `Object.entries` to add each key and value pair to the panel to append
     // tags for each key-value in the metadata.
       Object.entries(sample).forEach(function([key,value]){
-        var row = sampleData.append("h6");
-        row.text(`${key}:${value}`)
-      })
-    });
+        var row = sampleMetaData.append("h6"); row.text(`${key}:${value}`)})});
 } 
 
 
 function buildCharts(sample) {
 
   // Use d3.json to fetch the sample data for the plots
- var plotData = `/samples/${sample}`;
+ var plotSampleData = `/samples/${sample}`;
+
  // Build a Bubble Chart using the sample data
- d3.json(plotData).then(function(data){
+ d3.json(plotSampleData).then(function(data){
    var x_axis = data.otu_ids;
    var y_axis = data.sample_values;
    var sizes = data.sample_values;
    var colors = data.otu_ids;
    var texts = data.otu_labels;
-   var bubble = {
+   var bubbleChart = {
      x: x_axis,
      y: y_axis,
      text: texts,
      mode: `markers`,
-     marker: {
-       size: sizes,
-       color: colors
-     }
+     marker: {size: sizes, color: colors}
    };
-   var data = [bubble];
+   
+   var dataForGraphics = [bubbleChart];
    var layout = {
      title: "Belly Button Bacteria",
-     xaxis: {title: "OTU ID"}
+     xaxis: {title: "OTU IDs"}
    };
-   Plotly.newPlot("bubble", data, layout);
+
+   Plotly.newPlot("bubble", dataForGraphics, layout);
 
 
    // Build a Pie Chart
-   d3.json(plotData).then(function(data){
-     var value = data.sample_values.slice(0,10);
-     var label = data.otu_ids.slice(0,10);
-     var display = data.otu_labels.slice(0,10);
+   d3.json(plotSampleData).then(function(dataForGraphics){
+     var value = dataForGraphics.sample_values.slice(0,10);
+     var label = dataForGraphics.otu_ids.slice(0,10);
+     var display = dataForGraphics.otu_labels.slice(0,10);
      var pie_chart = [{
        values: value,
        labels: label,
@@ -58,16 +58,11 @@ function buildCharts(sample) {
        type: "pie"
      }];
 
-     var layout = {
-      height: 400,
-      width: 500
-     
-    };
+     var layout = {height: 400, width: 700};
 
-     Plotly.newPlot('pie',pie_chart,layout);
-   });
- });
+     Plotly.newPlot('pie',pie_chart,layout);});});
 }
+
 
 function init() {
   // Grab a reference to the dropdown select element
