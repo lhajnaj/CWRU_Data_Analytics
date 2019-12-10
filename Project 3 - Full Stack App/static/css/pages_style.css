@@ -1,0 +1,33 @@
+.menu-bar {
+    background: black;
+    margin: 0px;
+    text-align: center;
+    opacity: 0.8;
+}
+.menu-bar ul {
+    list-style: none;
+    color: #fff;
+}
+.menu-bar ul li {
+    display: inline-block;
+    text-align: center;
+    width: 120px;
+    margin: 2.5px;
+    padding: 2.5px;
+    font-size: 10px;
+}
+.menu-bar ul li a{
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+}
+.active, .menu-bar ul li:hover {
+    background: #2bab0d;
+    border-radius: 3px;
+}
+.title {
+    background-color: #1b3146;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: bold;
+}

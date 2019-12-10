@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>NBA Analysis</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/superhero/bootstrap.min.css">
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+
+        <div class="menu-bar">
+            <div class="title">
+                <h1>NBA Analysis</h1>
+            </div>
+            <ul class="bar">
+                <!-- <div class="menu-items"> -->
+                
+                <li><a href="/">Home</a></li>
+                <li><a href="/ppg">Points per Game</a></li>
+                <li><a href="/age">Age</a></li>
+                <li><a href="/height">Height</a></li>
+                <li><a href="/plusminus">Plus Minus</a></li>
+                <li><a href="/stacked">Team Salary</a></li>
+                <li><a href="/serviceline">Years of Service</a></li>
+                <li><a href="/heighthistogram">Height Histogram</a></li>
+                <li><a href="/player2">Behind the Scenes</a></li>
+                            
+                <!-- </div> -->
+            </ul>
+        </div>
+
+
+
+    <!-- <div id="chart here"></div> -->
+    <!-- <div class="container"> -->
+        <!-- <div class="col-md-12 jumbotron text-center">
+            <h1>NBA Analysis</h1>
+            <p>Use the menu to explore the dataset</p>
+        </div> -->
+    <!-- </div> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <!-- <script src="{{ url_for('static', filename='js/app.js') }}"></script>     -->
+
+    <div class="wrapper">
+        <!-- <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navber-brand" href="index.html">NBA Analysis</a> -->
+                <!-- </div>
+            </div> -->
+        <!-- </nav>  -->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="hero text-center"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="row margin-top-50">
+                <div class="col-md-12">
+                    <aside class="filter">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">Filter Search</div>
+                            <div class="panel-body">
+                                <form>
+                                    <div class="form-group">
+                                        <ul class="list-group" id="filter">
+                                            <li class="filter list-group-item">
+                                                <label for="name">Enter Player Name</label>
+                                                <input class="form-control" id="name" type="text" placeholder="LeBron James">
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <button id="filter-btn" type="button" class="btn btn-default">Filter Table</button>
+                                </form>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+                <div class="col-md-12">
+                    <div id="table-area" class="table-responsive">
+                        <table id="nba-table" class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th class="table-head">Rank</th>
+                                    <th class="table-head">Player</th>
+                                    <th class="table-head">Team</th>
+                                    <th class="table-head">Salary</th>
+                                    <th class="table-head">Height</th>
+                                    <th class="table-head">Age</th>
+                                    <th class="table-head">Games Played</th>
+                                    <th class="table-head">Minutes</th>
+                                    <th class="table-head">Points</th>
+                                    <th class="table-head">Field Goals Made</th>
+                                    <th class="table-head">Field Goals Attempted</th>
+                                    <th class="table-head">Field Goal Percentage</th>
+                                    <th class="table-head">Three Points Made</th>
+                                    <th class="table-head">Three Points Attempted</th>
+                                    <th class="table-head">Three Point Percentage</th>
+                                    <th class="table-head">Free Throws Made</th>
+                                    <th class="table-head">Free Throws Attempted</th>
+                                    <th class="table-head">Free Throw Percentage</th>
+                                    <th class="table-head">Offensive Rebounds</th>
+                                    <th class="table-head">Defensive Rebounds</th>
+                                    <th class="table-head">Rebounds</th>
+                                    <th class="table-head">Assists</th>
+                                    <th class="table-head">Turnovers</th>
+                                    <th class="table-head">Steals</th>
+                                    <th class="table-head">Blocks</th>
+                                    <th class="table-head">Plus Minus</th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.min.js"></script>
+    <!-- <script src="static/js/table_data.js"></script> -->
+    <script src="static/js/app.js"></script>
+</body>
+
+</html>
