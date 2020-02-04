@@ -1,0 +1,8 @@
+1.NBA Players stats since 1950  
+https://www.kaggle.com/drgilermo/nba-players-stats
+2.2019-20 NBA Player Contracts  | Basketball-Reference.com   
+https://www.basketball-reference.com/contracts/players.html
+3.2018-2019 NBA Players Stats
+https://www.kaggle.com/terrycheng/2018-nba-players-stats
+4 NBA players Draft Combine Measurements
+https://data.world/achou/nba-draft-combine-measurements

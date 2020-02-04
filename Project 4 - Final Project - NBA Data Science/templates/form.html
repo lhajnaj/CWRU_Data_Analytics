@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>NBA Data Science</title>
+        <link rel="stylesheet" href="static/css/form.css">
+    </head>
+    <body>
+        <div class="menu-bar">
+            <div class="title">
+                <h1>NBA Data Science</h1>
+            </div>
+            <ul class="bar">
+                <!-- <div class="menu-items"> -->
+                
+                <li><a href="/">Salary Generator</a></li>
+                <li><a href="/ppg">Points per Game</a></li>
+                <li><a href="/age">Age</a></li>
+                <li><a href="/height">Height</a></li>
+                <li><a href="/plusminus">Plus Minus</a></li>
+                <li><a href="/serviceline">Years of Service</a></li>
+                <li><a href="/player_search">Player Search</a></li>
+                            
+                <!-- </div> -->
+            </ul>
+        </div>
+        <div class="box">
+            <form method="POST" action="/">
+
+                <h3>Salary Generator</h3>
+
+                <div class="inputBox">
+                    <label for="inputAge">Age</label>
+                    <input type="integer" id="inputAge" name="age" placeholder="Enter a number from 19 to 40" required="">
+                </div>
+
+                <div class="inputBox">
+                    <label for="inputPts">Points</label>
+                    <input type="integer" id="inputPts" name="pts" placeholder="Enter a number from 1 to 40" required="">
+                </div>
+
+                <div class="inputBox">
+                    <label for="inputReb">Rebounds</label>
+                    <input type="integer" id="inputReb" name="reb" placeholder="Enter a number from 1 to 20" required="">
+                </div>
+
+                <div class="inputBox">
+                    <label for="inputAst">Assists</label>
+                    <input type="integer" id="inputAst" name="ast" placeholder="Enter a number from 1 to 20" required="">
+                </div>
+
+                <div class="inputBox">
+                    <label for="inputPlm">Plus-minus</label>
+                    <input type="integer" id="inputPlm" name="plm" placeholder="Enter a number from -10 to 10" required="">
+                </div>
+
+                <input type="submit" value="Calculate">
+
+
+            </form>
+
+            <h3>The player's salary prediction is:</h3>
+            <h3>{{salary}}</h3>
+        </div>
+    </body>
+</html>
